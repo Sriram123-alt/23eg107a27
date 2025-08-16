@@ -1,20 +1,24 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+// Root route
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Loc8r' });
 });
-router.get('/', function(req, res, next) {
-   res.render('index', { title: 'Loc8r' }); 
-  }); 
-  router.get('/location', function(req, res, next) { 
-    res.render('index', { title: 'location info' }); 
-  }); 
-  router.get('/location/review', function(req, res, next) {
-     res.render('index', { title: 'Review' }); 
-    }); router.get('/about', function(req, res, next) { 
-      res.render('index', { title: 'about' });
-     });
+
+// Location info
+router.get('/location', function(req, res, next) { 
+  res.render('index', { title: 'Location Info' }); 
+});
+
+// Review page
+router.get('/location/review', function(req, res, next) {
+  res.render('index', { title: 'Review' }); 
+});
+
+// About page
+router.get('/about', function(req, res, next) { 
+  res.render('index', { title: 'About' });
+});
 
 module.exports = router;
